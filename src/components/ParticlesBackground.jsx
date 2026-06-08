@@ -1,116 +1,100 @@
-import React from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+
+const particleOptions = {
+    background: {
+        color: {
+            value: "transparent",
+        },
+    },
+    detectRetina: true,
+    fpsLimit: 60,
+    fullScreen: {
+        enable: false,
+    },
+    interactivity: {
+        events: {
+            onHover: {
+                enable: true,
+                mode: "repulse",
+            },
+            resize: {
+                enable: true,
+            },
+        },
+        modes: {
+            repulse: {
+                distance: 110,
+                duration: 0.4,
+            },
+        },
+    },
+    particles: {
+        color: {
+            value: ["#67e8f9", "#fbbf24", "#f8fafc"],
+        },
+        links: {
+            color: "#67e8f9",
+            distance: 145,
+            enable: true,
+            opacity: 0.16,
+            width: 1,
+        },
+        move: {
+            direction: "none",
+            enable: true,
+            outModes: {
+                default: "bounce",
+            },
+            random: false,
+            speed: 0.45,
+            straight: false,
+        },
+        number: {
+            density: {
+                enable: true,
+                area: 900,
+            },
+            value: 70,
+        },
+        opacity: {
+            value: {
+                min: 0.12,
+                max: 0.45,
+            },
+        },
+        shape: {
+            type: "circle",
+        },
+        size: {
+            value: {
+                min: 1,
+                max: 3,
+            },
+        },
+    },
+};
 
 const ParticlesBackground = () => {
-    const particlesInit = async (main) => {
-        await loadFull(main);
-    };
+    const [ready, setReady] = useState(false);
 
-    const options = {
-        autoPlay: true,
-        background: {
-            color: { value: "#043564" },
-            image: "url('https://vincentgarreau.com/particles.js/assets/img/kbLd9vb_new.gif')",
-            position: "0 50%",
-            repeat: "no-repeat",
-            size: "60%",
-            opacity: 1
-        },
-        backgroundMask: {
-            composite: "destination-out",
-            cover: { opacity: 1, color: { value: "" } },
-            enable: false
-        },
-        clear: true,
-        fullScreen: {
-            enable: true,
-            zIndex: 0
-        },
-        detectRetina: true,
-        duration: 0,
-        fpsLimit: 120,
-        interactivity: {
-            detectsOn: "window",
-            events: {
-                onClick: { enable: false, mode: [] },
-                onHover: {
-                    enable: true,
-                    mode: "repulse",
-                    parallax: { enable: false, force: 2, smooth: 10 }
-                },
-                resize: { enable: true, delay: 0.5 }
-            },
-            modes: {
-                repulse: {
-                    distance: 100,
-                    duration: 0.4,
-                    factor: 100,
-                    speed: 1,
-                    maxSpeed: 50,
-                    easing: "ease-out-quad",
-                    divs: {
-                        distance: 100,
-                        duration: 0.4,
-                        factor: 100,
-                        speed: 1,
-                        maxSpeed: 50,
-                        easing: "ease-out-quad",
-                        selectors: []
-                    }
-                },
-                trail: { delay: 1, pauseOnStop: false, quantity: 1 },
-                attract: {
-                    distance: 200,
-                    duration: 0.4,
-                    easing: "ease-out-quad",
-                    factor: 1,
-                    maxSpeed: 50,
-                    speed: 1
-                },
-                connect: {
-                    distance: 80,
-                    links: { opacity: 0.5 },
-                    radius: 60
-                },
-                grab: {
-                    distance: 100,
-                    links: {
-                        blink: false,
-                        consent: false,
-                        opacity: 1
-                    }
-                }
-            }
-        },
-        particles: {
-            number: {
-                density: { enable: false, width: 1920, height: 1080 },
-                value: 150
-            },
-            color: { value: "#ffffff" },
-            shape: {
-                type: "star",
-                options: { star: { sides: 5 } }
-            },
-            opacity: { value: 0.5 },
-            size: { value: { min: 1, max: 4 } },
-            move: {
-                enable: true,
-                speed: 6,
-                direction: "left",
-                outModes: { default: "out" },
-                straight: true
-            },
-            zIndex: { value: 0 }
-        },
-        pauseOnBlur: true,
-        pauseOnOutsideViewport: true,
-        zLayers: 100
-    };
+    useEffect(() => {
+        initParticlesEngine(async (engine) => {
+            await loadSlim(engine);
+        }).then(() => {
+            setReady(true);
+        });
+    }, []);
+
+    if (!ready) {
+        return null;
+    }
 
     return (
-        <Particles id="tsparticles" init={particlesInit} options={options} />
+        <div className="pointer-events-none fixed inset-0 z-0 opacity-70">
+            <Particles id="tsparticles" className="h-full w-full" options={particleOptions} />
+        </div>
     );
 };
 

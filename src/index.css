@@ -6,5 +6,9 @@ html, body, #root {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #0a1128;
+    background-color: #08111f;
+}
+
+body {
+    min-width: 320px;
 }
