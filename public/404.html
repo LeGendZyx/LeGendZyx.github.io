@@ -7,12 +7,7 @@
   </head>
   <body>
     <script>
-      const firstPathSegment = location.pathname.split("/").filter(Boolean)[0];
-      const basePath = firstPathSegment?.endsWith(".github.io")
-        ? `/${firstPathSegment}/`
-        : "/";
-
-      window.location.replace(basePath);
+      window.location.replace("/");
     </script>
   </body>
 </html>
