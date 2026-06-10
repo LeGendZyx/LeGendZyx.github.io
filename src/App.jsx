@@ -416,17 +416,34 @@ const ProjectCard = ({ title, role, time, highlights }) => (
     </Panel>
 );
 
-const ShowcaseCard = ({ title, time, tech, description, techLabel }) => (
-    <article className="h-full rounded-2xl border border-white/10 bg-white/[0.045] p-5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-200/40 hover:shadow-[0_8px_32px_rgba(103,232,249,0.12)]">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-            <h4 className="text-lg font-semibold text-white">{title}</h4>
-            <span className="w-fit rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">{time}</span>
+const ShowcaseCard = ({ title, time, tech, description, techLabel, image }) => (
+    <article className="group h-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.045] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-200/40 hover:shadow-[0_8px_32px_rgba(103,232,249,0.12)]">
+        <div className="relative aspect-video overflow-hidden border-b border-white/10">
+            {image ? (
+                <img
+                    src={`${import.meta.env.BASE_URL}${image}`}
+                    alt={title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+            ) : (
+                <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-cyan-400/15 via-violet-500/10 to-amber-300/10">
+                    <span className="select-none font-mono text-4xl text-slate-500/70">&lt;/&gt;</span>
+                </div>
+            )}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#08111f]/45 to-transparent" />
         </div>
-        <p className="mt-4 font-mono text-sm font-medium text-amber-100">
-            {techLabel}
-            {tech}
-        </p>
-        <p className="mt-3 text-sm leading-7 text-slate-300">{description}</p>
+        <div className="p-5">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                <h4 className="text-lg font-semibold text-white">{title}</h4>
+                <span className="w-fit shrink-0 rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">{time}</span>
+            </div>
+            <p className="mt-4 font-mono text-sm font-medium text-amber-100">
+                {techLabel}
+                {tech}
+            </p>
+            <p className="mt-3 text-sm leading-7 text-slate-300">{description}</p>
+        </div>
     </article>
 );
 

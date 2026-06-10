@@ -87,17 +87,26 @@ const zh = {
     ],
     projectShowcaseList: [
         {
-            title: "网页应用：Rosen 管道可视化平台",
-            time: "2024.02 - 2024.05",
-            tech: "React, Node.js, MongoDB, SCSS, Selenium",
+            title: "TIAGo 服务机器人：病房辅助场景",
+            time: "2025.11 - 至今",
+            tech: "ROS 2, Nav2, Webots, Mediapipe",
             description:
-                "为德国 Rosen 公司开发的网页应用，用于可视化标记管道部署设备，支持完整的前后端交互和测试流程。",
+                "面向化疗病房辅助场景的服务机器人，融合招手检测与语音触发的多模态感知，实现从用户请求到自主接近的闭环。",
+            image: "projects/tiago.jpg",
         },
         {
             title: "Unity 2D 模拟经营游戏《宠爱归路》",
             time: "2024.10 - 至今",
             tech: "Unity, C#, 游戏架构设计",
             description: "任主程完成任务系统、团队协作与核心功能，参加 TapTap Game Jam。",
+            image: "projects/pet-way-home.jpg",
+        },
+        {
+            title: "网页应用：Rosen 管道可视化平台",
+            time: "2024.02 - 2024.05",
+            tech: "React, Node.js, MongoDB, SCSS, Selenium",
+            description:
+                "为德国 Rosen 公司开发的网页应用，用于可视化标记管道部署设备，支持完整的前后端交互和测试流程。",
         },
         {
             title: "AI 跑酷游戏《岁月悬丝》",
@@ -272,11 +281,12 @@ const en = {
     ],
     projectShowcaseList: [
         {
-            title: "Web App: Rosen Pipeline Visualization Platform",
-            time: "2024.02 - 2024.05",
-            tech: "React, Node.js, MongoDB, SCSS, Selenium",
+            title: "TIAGo Service Robot: Ward Assistance",
+            time: "2025.11 - Present",
+            tech: "ROS 2, Nav2, Webots, Mediapipe",
             description:
-                "A web application built for Rosen (Germany) to visually tag pipeline deployment devices, with a complete frontend-backend workflow and test pipeline.",
+                "A service robot for chemotherapy-ward assistance, fusing hand-wave detection and voice triggers to close the loop from user request to autonomous approach.",
+            image: "projects/tiago.jpg",
         },
         {
             title: "Unity 2D Management Sim \"The Way Home for Pets\"",
@@ -284,6 +294,14 @@ const en = {
             tech: "Unity, C#, Game Architecture",
             description:
                 "Served as lead programmer for the quest system, team coordination and core features; entered the TapTap Game Jam.",
+            image: "projects/pet-way-home.jpg",
+        },
+        {
+            title: "Web App: Rosen Pipeline Visualization Platform",
+            time: "2024.02 - 2024.05",
+            tech: "React, Node.js, MongoDB, SCSS, Selenium",
+            description:
+                "A web application built for Rosen (Germany) to visually tag pipeline deployment devices, with a complete frontend-backend workflow and test pipeline.",
         },
         {
             title: "AI Runner Game \"Threads of Time\"",
