@@ -3,9 +3,8 @@ const zh = {
     documentTitle: "庄以煊的个人网站",
     profile: {
         name: "庄以煊",
-        label: "LeGendZ",
         title: "关注机器人感知、多模态交互与智能系统集成，也持续参与 Web 与实时交互系统开发。",
-        intro: "我是庄以煊（LeGendZ），目前关注机器人感知、多模态交互与智能系统集成，也持续进行 Web 与实时交互系统开发。",
+        intro: "我是庄以煊，目前关注机器人感知、多模态交互与智能系统集成，也持续进行 Web 与实时交互系统开发。",
         summary:
             "具备扎实的计算机、数学与机器学习基础，能够将算法理解、实验验证与工程实现结合到实际项目中。适应英文沟通与跨学科协作环境，并善用 AI 辅助工具提升信息检索、代码开发与实验迭代效率。",
         contacts: [
@@ -161,7 +160,11 @@ const zh = {
         { label: "技能", href: "#skills" },
     ],
     ui: {
-        heroHeading: "欢迎来到庄以煊的个人网站",
+        heroGreeting: "你好，我是",
+        heroName: "庄以煊",
+        roles: ["机器人感知与交互", "多模态机器学习", "Web 与实时交互系统", "Unity 游戏开发"],
+        scrollHint: "向下滚动",
+        footer: "© 2026 庄以煊 · 用 React + Vite + Tailwind 构建",
         viewProjects: "查看项目",
         viewResume: "查看简历",
         profileTitle: "个人概况",
@@ -185,9 +188,8 @@ const en = {
     documentTitle: "Yixuan Zhuang's Personal Website",
     profile: {
         name: "Yixuan Zhuang",
-        label: "LeGendZ",
         title: "Focused on robot perception, multimodal interaction and intelligent system integration, with ongoing work on web and real-time interactive systems.",
-        intro: "I'm Yixuan Zhuang (LeGendZ). I currently focus on robot perception, multimodal interaction and intelligent system integration, while continuing to build web and real-time interactive systems.",
+        intro: "I'm Yixuan Zhuang. I currently focus on robot perception, multimodal interaction and intelligent system integration, while continuing to build web and real-time interactive systems.",
         summary:
             "Solid foundation in computer science, mathematics and machine learning, with the ability to combine algorithmic understanding, experimental validation and engineering implementation in real projects. Comfortable working in English-speaking, cross-disciplinary teams, and skilled at using AI-assisted tools to speed up information retrieval, coding and experiment iteration.",
         contacts: [
@@ -349,7 +351,16 @@ const en = {
         { label: "Skills", href: "#skills" },
     ],
     ui: {
-        heroHeading: "Welcome to Yixuan Zhuang's Personal Website",
+        heroGreeting: "Hi, I'm",
+        heroName: "Yixuan Zhuang",
+        roles: [
+            "Robot Perception & Interaction",
+            "Multimodal Machine Learning",
+            "Web & Real-Time Interactive Systems",
+            "Unity Game Development",
+        ],
+        scrollHint: "Scroll Down",
+        footer: "© 2026 Yixuan Zhuang · Built with React + Vite + Tailwind",
         viewProjects: "View Projects",
         viewResume: "View Resume",
         profileTitle: "Profile",
