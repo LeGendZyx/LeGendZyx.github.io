@@ -140,30 +140,33 @@ function App() {
                 <Hero t={t} />
 
                 <section id="summary" className="scroll-mt-24 py-12">
-                    <div className="grid gap-5 lg:grid-cols-[1.25fr_0.75fr]">
-                        <Reveal>
-                            <Panel className="h-full">
-                                <SectionHeading number="01" eyebrow="Profile" title={t.ui.profileTitle} />
-                                <p className="mt-5 text-base leading-8 text-slate-300">{t.profile.summary}</p>
-                            </Panel>
-                        </Reveal>
-                        <Reveal delay={120}>
-                            <Panel className="h-full">
-                                <SectionHeading number="02" eyebrow="Contact" title={t.ui.contactTitle} />
-                                <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-                                    {t.profile.contacts.map((contact) => (
-                                        <ContactItem key={contact.label} {...contact} />
-                                    ))}
+                    <Reveal>
+                        <Panel>
+                            <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+                                <div>
+                                    <SectionHeading number="01" eyebrow="Profile" title={t.ui.profileTitle} />
+                                    <p className="mt-5 text-base leading-8 text-slate-300">{t.profile.summary}</p>
                                 </div>
-                            </Panel>
-                        </Reveal>
-                    </div>
+                                <div className="lg:pt-1">
+                                    <p className="font-mono text-xs font-semibold uppercase tracking-[0.26em] text-cyan-200">
+                                        {"// "}
+                                        {t.ui.contactTitle}
+                                    </p>
+                                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                                        {t.profile.contacts.map((contact) => (
+                                            <ContactItem key={contact.label} {...contact} compact />
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </Panel>
+                    </Reveal>
                 </section>
 
                 <section id="experience" className="scroll-mt-24 py-12">
                     <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
                         <Reveal>
-                            <SectionHeading number="03" eyebrow="Resume" title={t.ui.resumeTitle} />
+                            <SectionHeading number="02" eyebrow="Resume" title={t.ui.resumeTitle} />
                             <p className="mt-4 max-w-sm text-sm leading-7 text-slate-400">{t.ui.resumeNote}</p>
                         </Reveal>
                         <div className="space-y-5">
@@ -179,7 +182,7 @@ function App() {
 
                 <section id="projects" className="scroll-mt-24 py-12">
                     <Reveal>
-                        <SectionHeading number="04" eyebrow="Projects" title={t.ui.projectsTitle} />
+                        <SectionHeading number="03" eyebrow="Projects" title={t.ui.projectsTitle} />
                     </Reveal>
                     <div className="mt-7 grid gap-5">
                         {t.projectList.map((project, index) => (
@@ -207,7 +210,7 @@ function App() {
                     <div className="grid gap-5 lg:grid-cols-[1fr_0.8fr]">
                         <Reveal>
                             <Panel className="h-full">
-                                <SectionHeading number="05" eyebrow="Stack" title={t.ui.stackTitle} />
+                                <SectionHeading number="04" eyebrow="Stack" title={t.ui.stackTitle} />
                                 <div className="mt-6 grid gap-5 md:grid-cols-3">
                                     {t.skillGroups.map((group) => (
                                         <div key={group.title}>
@@ -226,7 +229,7 @@ function App() {
                         </Reveal>
                         <Reveal delay={120}>
                             <Panel className="h-full">
-                                <SectionHeading number="06" eyebrow="Language" title={t.ui.languageTitle} />
+                                <SectionHeading number="05" eyebrow="Language" title={t.ui.languageTitle} />
                                 <div className="mt-6 flex flex-wrap gap-2">
                                     {t.languages.map((item) => (
                                         <Badge key={item}>{item}</Badge>
@@ -251,46 +254,33 @@ const Hero = ({ t }) => {
     return (
         <section
             id="home"
-            className="relative grid min-h-[calc(100vh-76px)] scroll-mt-24 items-center gap-10 py-16 lg:grid-cols-[1.1fr_0.9fr]"
+            className="relative flex min-h-[calc(100vh-76px)] scroll-mt-24 flex-col items-center justify-center py-16 text-center"
         >
-            <div>
-                <h1 className="text-5xl font-semibold leading-tight text-white sm:text-7xl">
-                    {t.ui.heroGreeting}
-                    <br />
-                    <span className="gradient-text">{t.ui.heroName}</span>
-                </h1>
-                <div className="mt-6 flex items-center font-mono text-lg text-cyan-200 sm:text-xl">
-                    <span className="mr-3 select-none text-slate-500">&gt;</span>
-                    <span>{typed}</span>
-                    <span className="typing-cursor" aria-hidden="true" />
-                </div>
-                <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">{t.profile.intro}</p>
-                <div className="mt-8 flex flex-wrap gap-3">
-                    <a
-                        href="#projects"
-                        className="rounded-full bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 shadow-[0_0_24px_rgba(103,232,249,0.35)] transition hover:bg-cyan-200 hover:shadow-[0_0_40px_rgba(103,232,249,0.55)]"
-                    >
-                        {t.ui.viewProjects}
-                    </a>
-                    <a
-                        href="#summary"
-                        className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-amber-200/70 hover:bg-white/10"
-                    >
-                        {t.ui.viewResume}
-                    </a>
-                </div>
+            <h1 className="text-5xl font-semibold leading-tight text-white sm:text-7xl">
+                {t.ui.heroGreeting}
+                <br />
+                <span className="gradient-text">{t.ui.heroName}</span>
+            </h1>
+            <div className="mt-7 flex items-center justify-center font-mono text-lg text-cyan-200 sm:text-xl">
+                <span className="mr-3 select-none text-slate-500">&gt;</span>
+                <span>{typed}</span>
+                <span className="typing-cursor" aria-hidden="true" />
             </div>
-
-            <Panel className="lg:justify-self-end">
-                <p className="font-mono text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Resume</p>
-                <h2 className="mt-5 text-4xl font-semibold text-white sm:text-5xl">{t.profile.name}</h2>
-                <p className="mt-5 text-base leading-8 text-slate-300">{t.profile.title}</p>
-                <div className="mt-7 grid gap-3">
-                    {t.profile.contacts.map((contact) => (
-                        <ContactItem key={contact.label} {...contact} compact />
-                    ))}
-                </div>
-            </Panel>
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">{t.profile.intro}</p>
+            <div className="mt-9 flex flex-wrap justify-center gap-3">
+                <a
+                    href="#projects"
+                    className="rounded-full bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 shadow-[0_0_24px_rgba(103,232,249,0.35)] transition hover:bg-cyan-200 hover:shadow-[0_0_40px_rgba(103,232,249,0.55)]"
+                >
+                    {t.ui.viewProjects}
+                </a>
+                <a
+                    href="#summary"
+                    className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-amber-200/70 hover:bg-white/10"
+                >
+                    {t.ui.viewResume}
+                </a>
+            </div>
 
             <a
                 href="#summary"
