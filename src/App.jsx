@@ -101,9 +101,11 @@ function App() {
 
             <header className="sticky top-0 z-30 border-b border-white/10 bg-[#08111f]/85 backdrop-blur">
                 <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
-                    <a href="#home" className="group text-sm font-semibold tracking-[0.24em] text-cyan-200">
-                        LeGendZ
-                        <span className="block h-px max-w-0 bg-cyan-300 transition-all duration-300 group-hover:max-w-full" />
+                    <a
+                        href="#home"
+                        className="shrink-0 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_rgba(248,113,113,0.45)]"
+                    >
+                        <img src={`${import.meta.env.BASE_URL}icon.png`} alt="LeGendZ" className="h-9 w-9" />
                     </a>
                     <div className="flex items-center gap-3">
                         <div className="flex gap-1 overflow-x-auto rounded-full border border-white/10 bg-white/[0.04] p-1">
