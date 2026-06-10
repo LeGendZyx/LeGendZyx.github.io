@@ -25,30 +25,34 @@ function App() {
 
             <header className="sticky top-0 z-30 border-b border-white/10 bg-[#08111f]/85 backdrop-blur">
                 <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
+                    <a href="#home" className="text-sm font-semibold tracking-[0.24em] text-cyan-200">
+                        LeGendZ
+                    </a>
                     <div className="flex items-center gap-3">
+                        <div className="flex gap-1 overflow-x-auto rounded-full border border-white/10 bg-white/[0.04] p-1">
+                            {t.navItems.map((item) => (
+                                <a
+                                    key={item.href}
+                                    href={item.href}
+                                    className="whitespace-nowrap rounded-full px-3 py-2 text-sm text-slate-300 transition hover:bg-white/10 hover:text-white"
+                                >
+                                    {item.label}
+                                </a>
+                            ))}
+                        </div>
                         <button
                             type="button"
                             onClick={toggleLang}
                             title={t.ui.switchTo}
                             aria-label={t.ui.switchTo}
-                            className="rounded-full border border-cyan-200/30 bg-cyan-200/10 px-3 py-1.5 text-xs font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/20"
+                            className="flex shrink-0 items-center gap-1.5 rounded-full border border-cyan-200/30 bg-cyan-200/10 px-3.5 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/20"
                         >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z" />
+                            </svg>
                             {t.ui.switchLabel}
                         </button>
-                        <a href="#home" className="text-sm font-semibold tracking-[0.24em] text-cyan-200">
-                            LeGendZ
-                        </a>
-                    </div>
-                    <div className="flex gap-1 overflow-x-auto rounded-full border border-white/10 bg-white/[0.04] p-1">
-                        {t.navItems.map((item) => (
-                            <a
-                                key={item.href}
-                                href={item.href}
-                                className="whitespace-nowrap rounded-full px-3 py-2 text-sm text-slate-300 transition hover:bg-white/10 hover:text-white"
-                            >
-                                {item.label}
-                            </a>
-                        ))}
                     </div>
                 </nav>
             </header>
