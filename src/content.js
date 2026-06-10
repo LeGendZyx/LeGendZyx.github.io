@@ -3,8 +3,8 @@ const zh = {
     documentTitle: "庄以煊的个人网站",
     profile: {
         name: "庄以煊",
-        title: "关注机器人感知、多模态交互与智能系统集成，也持续参与 Web 与实时交互系统开发。",
-        intro: "我是庄以煊，目前关注机器人感知、多模态交互与智能系统集成，也持续进行 Web 与实时交互系统开发。",
+        title: "关注具身智能、多模态交互与 AI 算法，致力于让智能系统理解人、走进真实场景。",
+        intro: "我是庄以煊，研究方向是具身智能、多模态交互与 AI 算法，关注如何让机器人和智能系统在真实场景中理解人、并与人自然交互。",
         summary:
             "具备扎实的计算机、数学与机器学习基础，能够将算法理解、实验验证与工程实现结合到实际项目中。适应英文沟通与跨学科协作环境，并善用 AI 辅助工具提升信息检索、代码开发与实验迭代效率。",
         contacts: [
@@ -162,7 +162,7 @@ const zh = {
     ui: {
         heroGreeting: "你好，我是",
         heroName: "庄以煊",
-        roles: ["机器人感知与交互", "多模态机器学习", "Web 与实时交互系统", "Unity 游戏开发"],
+        roles: ["具身智能", "多模态交互", "AI 算法"],
         scrollHint: "向下滚动",
         footer: "© 2026 庄以煊 · 用 React + Vite + Tailwind 构建",
         viewProjects: "查看项目",
@@ -170,7 +170,7 @@ const zh = {
         profileTitle: "个人概况",
         contactTitle: "联系方式",
         resumeTitle: "教育与工作经历",
-        resumeNote: "以机器人、机器学习和实时交互系统为主线，持续把研究理解落到工程实践里。",
+        resumeNote: "以具身智能、多模态交互与 AI 算法为主线，持续把研究理解落到工程实践里。",
         educationTitle: "教育经历",
         workTitle: "工作与实习经历",
         projectsTitle: "项目经历",
@@ -188,8 +188,8 @@ const en = {
     documentTitle: "Yixuan Zhuang's Personal Website",
     profile: {
         name: "Yixuan Zhuang",
-        title: "Focused on robot perception, multimodal interaction and intelligent system integration, with ongoing work on web and real-time interactive systems.",
-        intro: "I'm Yixuan Zhuang. I currently focus on robot perception, multimodal interaction and intelligent system integration, while continuing to build web and real-time interactive systems.",
+        title: "Focused on embodied AI, multimodal interaction and AI algorithms — building intelligent systems that understand people in real-world scenarios.",
+        intro: "I'm Yixuan Zhuang. My research interests are embodied AI, multimodal interaction and AI algorithms, with a focus on enabling robots and intelligent systems to understand and naturally interact with people in real-world settings.",
         summary:
             "Solid foundation in computer science, mathematics and machine learning, with the ability to combine algorithmic understanding, experimental validation and engineering implementation in real projects. Comfortable working in English-speaking, cross-disciplinary teams, and skilled at using AI-assisted tools to speed up information retrieval, coding and experiment iteration.",
         contacts: [
@@ -353,12 +353,7 @@ const en = {
     ui: {
         heroGreeting: "Hi, I'm",
         heroName: "Yixuan Zhuang",
-        roles: [
-            "Robot Perception & Interaction",
-            "Multimodal Machine Learning",
-            "Web & Real-Time Interactive Systems",
-            "Unity Game Development",
-        ],
+        roles: ["Embodied AI", "Multimodal Interaction", "AI Algorithms"],
         scrollHint: "Scroll Down",
         footer: "© 2026 Yixuan Zhuang · Built with React + Vite + Tailwind",
         viewProjects: "View Projects",
@@ -367,7 +362,7 @@ const en = {
         contactTitle: "Contact",
         resumeTitle: "Education & Work Experience",
         resumeNote:
-            "Centered on robotics, machine learning and real-time interactive systems, turning research understanding into engineering practice.",
+            "Centered on embodied AI, multimodal interaction and AI algorithms, turning research understanding into engineering practice.",
         educationTitle: "Education",
         workTitle: "Work & Internships",
         projectsTitle: "Projects",
