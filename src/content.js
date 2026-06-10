@@ -95,6 +95,22 @@ const zh = {
             image: "projects/tiago.jpg",
         },
         {
+            title: "Furhat 社交机器人：多人对话交互",
+            time: "2025.09 - 至今",
+            tech: "Furhat SDK, 多模态线索建模, RGBD 数据",
+            description:
+                "研究 Furhat 在多人对话中的轮次切换与响应时机，结合说话状态与视线方向等多模态线索，让机器人在群体对话中表现更自然。",
+            image: "projects/furhat.jpg",
+        },
+        {
+            title: "数字皮影：手势驱动的实时交互",
+            time: "2025.06 - 至今",
+            tech: "Web, Mediapipe, 实时手部跟踪",
+            description:
+                "清华大学五天晴工作室实习项目，开发基于浏览器的实时交互系统，利用 Mediapipe 手部跟踪实现手势驱动的数字皮影控制。",
+            image: "projects/shadow-puppet.jpg",
+        },
+        {
             title: "Unity 2D 模拟经营游戏《宠爱归路》",
             time: "2024.10 - 至今",
             tech: "Unity, C#, 游戏架构设计",
@@ -268,6 +284,22 @@ const en = {
             description:
                 "A service robot for chemotherapy-ward assistance, fusing hand-wave detection and voice triggers to close the loop from user request to autonomous approach.",
             image: "projects/tiago.jpg",
+        },
+        {
+            title: "Furhat Social Robot: Multi-Party Dialogue",
+            time: "2025.09 - Present",
+            tech: "Furhat SDK, Multimodal Cue Modeling, RGBD Data",
+            description:
+                "Researching turn-taking and response timing for Furhat in multi-party conversations, combining multimodal cues such as speaking state and gaze direction to make the robot feel more natural in group dialogue.",
+            image: "projects/furhat.jpg",
+        },
+        {
+            title: "Digital Shadow Puppetry: Gesture-Driven Interaction",
+            time: "2025.06 - Present",
+            tech: "Web, Mediapipe, Real-Time Hand Tracking",
+            description:
+                "Internship project at Wutianqing Studio, Tsinghua University: a browser-based real-time interactive system using Mediapipe hand tracking for gesture-driven digital shadow-puppet control.",
+            image: "projects/shadow-puppet.jpg",
         },
         {
             title: "Unity 2D Management Sim \"The Way Home for Pets\"",
