@@ -83,6 +83,7 @@ function App() {
         const saved = localStorage.getItem("lang");
         return saved === "en" || saved === "zh" ? saved : "zh";
     });
+    const [menuOpen, setMenuOpen] = useState(false);
     const t = content[lang];
 
     useEffect(() => {
@@ -100,15 +101,15 @@ function App() {
             <div className="fixed inset-0 z-0 bg-[linear-gradient(90deg,rgba(148,163,184,0.06)_1px,transparent_1px),linear-gradient(180deg,rgba(148,163,184,0.06)_1px,transparent_1px)] bg-[size:44px_44px]" />
 
             <header className="sticky top-0 z-30 border-b border-white/10 bg-[#08111f]/85 backdrop-blur">
-                <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
+                <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-4 sm:px-8">
                     <a
                         href="#home"
                         className="shrink-0 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_rgba(248,113,113,0.45)]"
                     >
                         <img src={`${import.meta.env.BASE_URL}icon.png`} alt="LeGendZ" className="h-9 w-9" />
                     </a>
-                    <div className="flex items-center gap-3">
-                        <div className="flex gap-1 overflow-x-auto rounded-full border border-white/10 bg-white/[0.04] p-1">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                        <div className="hidden gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 md:flex">
                             {t.navItems.map((item) => (
                                 <a
                                     key={item.href}
@@ -124,7 +125,7 @@ function App() {
                             onClick={toggleLang}
                             title={t.ui.switchTo}
                             aria-label={t.ui.switchTo}
-                            className="flex shrink-0 items-center gap-1.5 rounded-full border border-cyan-200/30 bg-cyan-200/10 px-3.5 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/20 hover:shadow-[0_0_18px_rgba(103,232,249,0.25)]"
+                            className="flex shrink-0 items-center gap-1.5 rounded-full border border-cyan-200/30 bg-cyan-200/10 px-3 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/20 hover:shadow-[0_0_18px_rgba(103,232,249,0.25)] sm:px-3.5"
                         >
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4" aria-hidden="true">
                                 <circle cx="12" cy="12" r="9" />
@@ -132,8 +133,33 @@ function App() {
                             </svg>
                             {t.ui.switchLabel}
                         </button>
+                        <button
+                            type="button"
+                            onClick={() => setMenuOpen((prev) => !prev)}
+                            aria-label={t.ui.menuLabel}
+                            aria-expanded={menuOpen}
+                            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-slate-200 transition hover:border-cyan-200/40 hover:text-white md:hidden"
+                        >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5" aria-hidden="true">
+                                {menuOpen ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+                            </svg>
+                        </button>
                     </div>
                 </nav>
+                {menuOpen ? (
+                    <div className="border-t border-white/10 px-5 pb-3 pt-2 md:hidden">
+                        {t.navItems.map((item) => (
+                            <a
+                                key={item.href}
+                                href={item.href}
+                                onClick={() => setMenuOpen(false)}
+                                className="block rounded-lg px-3 py-2.5 text-sm text-slate-300 transition hover:bg-white/10 hover:text-white"
+                            >
+                                {item.label}
+                            </a>
+                        ))}
+                    </div>
+                ) : null}
             </header>
 
             <main className="relative z-10 mx-auto max-w-6xl px-5 pb-20 sm:px-8">

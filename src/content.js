@@ -186,6 +186,7 @@ const zh = {
         techLabel: "技术栈：",
         switchLabel: "EN",
         switchTo: "Switch to English",
+        menuLabel: "菜单",
     },
 };
 
@@ -382,6 +383,7 @@ const en = {
         techLabel: "Tech: ",
         switchLabel: "中",
         switchTo: "切换到中文",
+        menuLabel: "Menu",
     },
 };
 
