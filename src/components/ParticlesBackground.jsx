@@ -17,51 +17,54 @@ const particleOptions = {
         events: {
             onHover: {
                 enable: true,
-                mode: "repulse",
+                mode: "connect",
             },
             resize: {
                 enable: true,
             },
         },
         modes: {
-            repulse: {
-                distance: 110,
-                duration: 0.4,
+            connect: {
+                distance: 90,
+                links: {
+                    opacity: 0.35,
+                },
+                radius: 125,
             },
         },
     },
     particles: {
         color: {
-            value: ["#67e8f9", "#fbbf24", "#f8fafc"],
+            value: ["#44f1ff", "#ff3f52", "#b8ff6a", "#e9f4f5"],
         },
         links: {
-            color: "#67e8f9",
-            distance: 145,
+            color: "#44f1ff",
+            distance: 138,
             enable: true,
-            opacity: 0.16,
-            width: 1,
+            opacity: 0.1,
+            width: 0.7,
         },
         move: {
-            direction: "none",
+            direction: "right",
             enable: true,
             outModes: {
-                default: "bounce",
+                default: "out",
             },
             random: false,
-            speed: 0.45,
-            straight: false,
+            speed: 0.32,
+            straight: true,
         },
         number: {
             density: {
                 enable: true,
-                area: 900,
+                area: 1100,
             },
-            value: 70,
+            value: 52,
         },
         opacity: {
             value: {
-                min: 0.12,
-                max: 0.45,
+                min: 0.1,
+                max: 0.35,
             },
         },
         shape: {
@@ -70,7 +73,7 @@ const particleOptions = {
         size: {
             value: {
                 min: 1,
-                max: 3,
+                max: 2.2,
             },
         },
     },
@@ -92,7 +95,7 @@ const ParticlesBackground = () => {
     }
 
     return (
-        <div className="pointer-events-none fixed inset-0 z-0 opacity-70">
+        <div className="pointer-events-none fixed inset-0 z-0 opacity-60">
             <Particles id="tsparticles" className="h-full w-full" options={particleOptions} />
         </div>
     );
