@@ -17,54 +17,54 @@ const particleOptions = {
         events: {
             onHover: {
                 enable: true,
-                mode: "connect",
+                mode: "bubble",
             },
             resize: {
                 enable: true,
             },
         },
         modes: {
-            connect: {
-                distance: 90,
-                links: {
-                    opacity: 0.35,
-                },
-                radius: 125,
+            bubble: {
+                distance: 140,
+                duration: 2,
+                opacity: 0.8,
+                size: 3,
             },
         },
     },
     particles: {
         color: {
-            value: ["#44f1ff", "#ff3f52", "#b8ff6a", "#e9f4f5"],
+            value: ["#ffffff", "#9ec5ff", "#b7a9ff", "#7fe2ff"],
         },
         links: {
-            color: "#44f1ff",
-            distance: 138,
-            enable: true,
-            opacity: 0.1,
-            width: 0.7,
+            enable: false,
         },
         move: {
-            direction: "right",
+            direction: "none",
             enable: true,
             outModes: {
                 default: "out",
             },
-            random: false,
-            speed: 0.32,
-            straight: true,
+            random: true,
+            speed: 0.18,
+            straight: false,
         },
         number: {
             density: {
                 enable: true,
-                area: 1100,
+                area: 1000,
             },
-            value: 52,
+            value: 46,
         },
         opacity: {
             value: {
-                min: 0.1,
-                max: 0.35,
+                min: 0.08,
+                max: 0.4,
+            },
+            animation: {
+                enable: true,
+                speed: 0.5,
+                sync: false,
             },
         },
         shape: {
@@ -72,8 +72,8 @@ const particleOptions = {
         },
         size: {
             value: {
-                min: 1,
-                max: 2.2,
+                min: 0.6,
+                max: 2,
             },
         },
     },
