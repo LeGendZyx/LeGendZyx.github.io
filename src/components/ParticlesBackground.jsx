@@ -34,7 +34,7 @@ const particleOptions = {
     },
     particles: {
         color: {
-            value: ["#ffffff", "#9ec5ff", "#b7a9ff", "#7fe2ff"],
+            value: ["#0a84ff", "#6a5cff", "#0a86b9", "#3b6fd1"],
         },
         links: {
             enable: false,
