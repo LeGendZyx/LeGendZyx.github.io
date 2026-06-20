@@ -17,54 +17,51 @@ const particleOptions = {
         events: {
             onHover: {
                 enable: true,
-                mode: "bubble",
+                mode: "repulse",
             },
             resize: {
                 enable: true,
             },
         },
         modes: {
-            bubble: {
-                distance: 140,
-                duration: 2,
-                opacity: 0.8,
-                size: 3,
+            repulse: {
+                distance: 110,
+                duration: 0.4,
             },
         },
     },
     particles: {
         color: {
-            value: ["#0a84ff", "#6a5cff", "#0a86b9", "#3b6fd1"],
+            value: ["#67e8f9", "#fbbf24", "#f8fafc"],
         },
         links: {
-            enable: false,
+            color: "#67e8f9",
+            distance: 145,
+            enable: true,
+            opacity: 0.16,
+            width: 1,
         },
         move: {
             direction: "none",
             enable: true,
             outModes: {
-                default: "out",
+                default: "bounce",
             },
-            random: true,
-            speed: 0.18,
+            random: false,
+            speed: 0.45,
             straight: false,
         },
         number: {
             density: {
                 enable: true,
-                area: 1000,
+                area: 900,
             },
-            value: 46,
+            value: 70,
         },
         opacity: {
             value: {
-                min: 0.08,
-                max: 0.4,
-            },
-            animation: {
-                enable: true,
-                speed: 0.5,
-                sync: false,
+                min: 0.12,
+                max: 0.45,
             },
         },
         shape: {
@@ -72,8 +69,8 @@ const particleOptions = {
         },
         size: {
             value: {
-                min: 0.6,
-                max: 2,
+                min: 1,
+                max: 3,
             },
         },
     },
@@ -95,7 +92,7 @@ const ParticlesBackground = () => {
     }
 
     return (
-        <div className="pointer-events-none fixed inset-0 z-0 opacity-60">
+        <div className="pointer-events-none fixed inset-0 z-0 opacity-70">
             <Particles id="tsparticles" className="h-full w-full" options={particleOptions} />
         </div>
     );
