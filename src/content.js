@@ -28,6 +28,16 @@ const zh = {
     ],
     projectList: [
         {
+            title: "明鉴 PaperAudit — 多智能体论文诚信筛查工具",
+            role: "黑客松项目 · UK AI Agent Hackathon",
+            time: "2026.07",
+            highlights: [
+                "开发开源多智能体论文诚信筛查工具参与 UK AI Agent Hackathon，面向科研论文中的统计异常、图像复用与引用完整性问题，辅助审稿人进行 evidence-based screening。",
+                "实现 PDF 解析、GRIM 检验、p-value 重算、图像重复检测与 Crossref 引用检查，并通过 CLI 和 FastAPI Web UI 生成 Markdown / JSON 审核报告。",
+                "设计 specialist AI reviewer 与 adjudicator agent 协同分析流程，输出带证据链的风险评估结果，用于支持人工复核。",
+            ],
+        },
+        {
             title: "Furhat 社交机器人对话系统",
             role: "机器人交互开发",
             time: "2025.09 - 至今",
@@ -219,6 +229,16 @@ const en = {
         },
     ],
     projectList: [
+        {
+            title: "PaperAudit — Multi-Agent Research Integrity Screening Tool",
+            role: "Hackathon Project · UK AI Agent Hackathon",
+            time: "2026.07",
+            highlights: [
+                "Developed an open-source multi-agent tool for screening scientific papers for research-integrity anomalies, focusing on statistical errors, image reuse and citation integrity.",
+                "Implemented PDF ingestion, GRIM tests, p-value recomputation, image-duplication detection and Crossref checks, with CLI and FastAPI web interfaces for generating Markdown / JSON audit reports.",
+                "Designed specialist AI reviewer and adjudicator agents to produce evidence-linked risk assessments for human review.",
+            ],
+        },
         {
             title: "Furhat Social Robot Dialogue System",
             role: "Robot Interaction Development",
