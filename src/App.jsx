@@ -200,6 +200,9 @@ function App() {
                                 <Timeline title={t.ui.educationTitle} items={t.educationList} />
                             </Reveal>
                             <Reveal delay={120}>
+                                <Timeline title={t.ui.publicationTitle} items={t.publicationList} />
+                            </Reveal>
+                            <Reveal delay={200}>
                                 <Timeline title={t.ui.workTitle} items={t.experienceList} />
                             </Reveal>
                         </div>

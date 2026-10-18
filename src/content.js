@@ -3,15 +3,16 @@ const zh = {
     documentTitle: "庄以煊的个人网站",
     profile: {
         name: "庄以煊",
-        title: "关注具身智能、多模态交互与 AI 算法，致力于让智能系统理解人、走进真实场景。",
-        intro: "我是庄以煊，研究方向是具身智能、多模态交互与 AI 算法，关注如何让机器人和智能系统在真实场景中理解人、并与人自然交互。",
+        title: "关注机器人感知、多模态交互与智能系统集成，致力于让智能系统理解人、走进真实场景。",
+        intro: "我是庄以煊，研究方向是机器人感知、多模态交互与智能系统集成，关注如何让机器人和智能系统在真实场景中理解人、并与人自然交互。",
         summary:
-            "具备扎实的计算机、数学与机器学习基础，能够将算法理解、实验验证与工程实现结合到实际项目中。适应英文沟通与跨学科协作环境，并善用 AI 辅助工具提升信息检索、代码开发与实验迭代效率。",
+            "具备扎实的计算机、数学与机器学习基础，能够将算法理解、实验验证与工程实现结合到实际项目中。具备良好的自驱力、学习能力与团队协作意识，适应英文沟通与跨学科合作环境，并善用 AI 辅助工具提升信息检索、代码开发与实验迭代效率。",
         contacts: [
             { label: "邮箱", value: "zhuangyixuan46@163.com", href: "mailto:zhuangyixuan46@163.com" },
             { label: "手机", value: "+86 18359735953", href: "tel:+8618359735953" },
             { label: "微信", value: "zyx43ksdy" },
             { label: "网站", value: "legendzyx.github.io", href: "https://legendzyx.github.io/" },
+            { label: "GitHub", value: "github.com/LeGendZyx", href: "https://github.com/LeGendZyx" },
         ],
     },
     educationList: [
@@ -26,31 +27,33 @@ const zh = {
             time: "2019.09 - 2024.09",
         },
     ],
-    projectList: [
+    publicationList: [
         {
-            title: "明鉴 PaperAudit — 多智能体论文诚信筛查工具",
-            role: "黑客松项目 · UK AI Agent Hackathon",
-            time: "2026.07",
+            title: "M³I：面向多人接待交互的多模态基准",
+            role: "共同第二作者 · ICASSP 2027 在审",
+            time: "2026.09",
             highlights: [
-                "开发开源多智能体论文诚信筛查工具参与 UK AI Agent Hackathon，面向科研论文中的统计异常、图像复用与引用完整性问题，辅助审稿人进行 evidence-based screening。",
-                "实现 PDF 解析、GRIM 检验、p-value 重算、图像重复检测与 Crossref 引用检查，并通过 CLI 和 FastAPI Web UI 生成 Markdown / JSON 审核报告。",
-                "设计 specialist AI reviewer 与 adjudicator agent 协同分析流程，输出带证据链的风险评估结果，用于支持人工复核。",
+                "负责多机位参与者级头姿数据管线，结合 YOLOv8 / YuNet、solvePnP 与多视角三角化，提取逐帧 Head Pose 及三维头部位置，为多人轮次预测构建视觉时序特征。",
+                "完成跨相机轨迹关联与稳定 Person ID 映射，并通过音频 / 运动互相关将头姿轨迹对齐至共享音频时间轴，统一不同设备的匿名参与者身份与时间基准。",
+                "参与构建包含 23 组、8 小时 42 分钟连续交互及 6 类非脚本接待场景的 M³I 数据集与多人轮次预测基准。",
             ],
         },
+    ],
+    projectList: [
         {
-            title: "Furhat 社交机器人对话系统",
-            role: "机器人交互开发",
+            title: "面向 Furhat 的多人对话轮次预测系统",
+            role: "多模态交互与机器学习",
             time: "2025.09 - 至今",
             highlights: [
-                "构建 Furhat 在多人对话场景中的交互流程，重点研究轮次切换、响应时机与用户体验。",
-                "围绕说话状态、视线方向与会话时序等多模态线索进行交互建模，用于提升机器人在群体对话中的自然性。",
-                "基于 RGBD 视频与音频数据重构对话数据流程，为后续 turn-taking 预测与机器学习建模提供数据支持。",
+                "面向 3-4 人服务对话，开发预测式轮次管理模型，提前判断每位参与者未来 2 秒的说话趋势，辅助机器人选择接话时机。",
+                "整合多视角视频、头部朝向、领夹麦音频和人工对话标注，完成约 6.4 万帧真实数据的同步、清洗与质量检查。",
+                "完成音频、视觉及融合方案的分组对比测试，发现头姿信息能改善整体帧级预测，但直接融合未带来稳定提升。",
             ],
         },
         {
             title: "TIAGo 服务机器人系统集成",
             role: "机器人系统集成",
-            time: "2025.11 - 至今",
+            time: "2025.11 - 2026.04",
             highlights: [
                 "参与基于 TIAGo 的辅助机器人系统开发，负责 Webots 仿真环境构建，以及从感知到导航执行的系统集成。",
                 "基于 ROS 2、Nav2 与服务场景任务逻辑，搭建面向化疗病房辅助场景的人机交互流程，实现从用户请求识别到自主接近的闭环。",
@@ -64,6 +67,16 @@ const zh = {
             highlights: [
                 "基于 ResNet-18、BiLSTM 与 Attention 构建 RGB 视频动作识别模型，用于 30 类工业行为分类。",
                 "完成数据预处理、数据增强、模型训练与验证流程，并在 early stopping 条件下取得 95% 的验证准确率。",
+            ],
+        },
+        {
+            title: "PaperAudit - 多智能体论文诚信筛查工具",
+            role: "黑客松项目 · UK AI Agent Hackathon",
+            time: "2026.07",
+            highlights: [
+                "开发开源多智能体论文诚信筛查工具参与 UK AI Agent Hackathon，面向科研论文中的统计异常、图像复用与引用完整性问题，辅助审稿人进行 evidence-based screening。",
+                "实现 PDF 解析、GRIM 检验、p-value 重算、图像重复检测与 Crossref 引用检查，并通过 CLI 和 FastAPI Web UI 生成 Markdown / JSON 审核报告。",
+                "设计 specialist AI reviewer 与 adjudicator agent 协同分析流程，输出带证据链的风险评估结果，用于支持人工复核。",
             ],
         },
         {
@@ -98,23 +111,23 @@ const zh = {
     projectShowcaseList: [
         {
             title: "TIAGo 服务机器人：病房辅助场景",
-            time: "2025.11 - 至今",
+            time: "2025.11 - 2026.04",
             tech: "ROS 2, Nav2, Webots, Mediapipe",
             description:
                 "面向化疗病房辅助场景的服务机器人，融合招手检测与语音触发的多模态感知，实现从用户请求到自主接近的闭环。",
             image: "projects/tiago.jpg",
         },
         {
-            title: "Furhat 社交机器人：多人对话交互",
+            title: "Furhat 社交机器人：多人对话轮次预测",
             time: "2025.09 - 至今",
-            tech: "Furhat SDK, 多模态线索建模, RGBD 数据",
+            tech: "Furhat SDK, 多模态轮次预测, Head Pose, Audio",
             description:
-                "研究 Furhat 在多人对话中的轮次切换与响应时机，结合说话状态与视线方向等多模态线索，让机器人在群体对话中表现更自然。",
+                "面向 3-4 人服务对话，结合多视角视频、头部朝向与音频开发预测式轮次管理模型，提前判断参与者的说话趋势，辅助机器人选择接话时机。",
             image: "projects/furhat.jpg",
         },
         {
             title: "数字皮影：手势驱动的实时交互",
-            time: "2025.06 - 至今",
+            time: "2025.06 - 2026.06",
             tech: "Web, Mediapipe, 实时手部跟踪",
             description:
                 "清华大学五天晴工作室实习项目，开发基于浏览器的实时交互系统，利用 Mediapipe 手部跟踪实现手势驱动的数字皮影控制。",
@@ -122,7 +135,7 @@ const zh = {
         },
         {
             title: "Unity 2D 模拟经营游戏《宠爱归路》",
-            time: "2024.10 - 至今",
+            time: "2024.10 - 2025.02",
             tech: "Unity, C#, 游戏架构设计",
             description: "任主程完成任务系统、团队协作与核心功能，参加 TapTap Game Jam。",
             image: "projects/pet-way-home.jpg",
@@ -132,7 +145,7 @@ const zh = {
         {
             title: "清华大学五天晴工作室",
             role: "前端开发工程师",
-            time: "2025.06 - 至今",
+            time: "2025.06 - 2026.06",
             highlights: [
                 "开发基于浏览器的实时交互系统，利用 Mediapipe 手部跟踪实现手势驱动的数字皮影控制。",
             ],
@@ -156,15 +169,15 @@ const zh = {
     skillGroups: [
         {
             title: "编程与工程",
-            items: ["Java", "Python", "C++", "JavaScript", "Git"],
+            items: ["Java", "Python", "C++", "Git"],
         },
         {
             title: "机器人与 AI",
-            items: ["ROS 2", "Mediapipe", "TensorFlow", "PyTorch"],
+            items: ["ROS 2", "Mediapipe", "PyTorch"],
         },
         {
             title: "平台与工具",
-            items: ["Linux / Ubuntu", "Unity", "React", "Node.js"],
+            items: ["Linux / Ubuntu", "Webots", "Isaac Sim", "Unity"],
         },
     ],
     languages: ["中文：母语", "英文：雅思 7.5 分"],
@@ -178,16 +191,17 @@ const zh = {
     ui: {
         heroGreeting: "你好，我是",
         heroName: "庄以煊",
-        roles: ["具身智能", "多模态交互", "AI 算法"],
+        roles: ["机器人感知", "多模态交互", "智能系统集成"],
         scrollHint: "向下滚动",
         footer: "© 2026 庄以煊 · 用 React + Vite + Tailwind 构建",
         viewProjects: "查看项目",
         viewResume: "查看简历",
         profileTitle: "个人概况",
         contactTitle: "联系方式",
-        resumeTitle: "教育与工作经历",
-        resumeNote: "以具身智能、多模态交互与 AI 算法为主线，持续把研究理解落到工程实践里。",
+        resumeTitle: "教育、论文与工作经历",
+        resumeNote: "以机器人感知、多模态交互与智能系统集成为主线，持续把研究理解落到工程实践里。",
         educationTitle: "教育经历",
+        publicationTitle: "论文",
         workTitle: "工作与实习经历",
         projectsTitle: "项目经历",
         showcaseTitle: "项目展示 · Projects",
@@ -205,15 +219,16 @@ const en = {
     documentTitle: "Yixuan Zhuang's Personal Website",
     profile: {
         name: "Yixuan Zhuang",
-        title: "Focused on embodied AI, multimodal interaction and AI algorithms — building intelligent systems that understand people in real-world scenarios.",
-        intro: "I'm Yixuan Zhuang. My research interests are embodied AI, multimodal interaction and AI algorithms, with a focus on enabling robots and intelligent systems to understand and naturally interact with people in real-world settings.",
+        title: "Focused on robot perception, multimodal interaction and intelligent system integration, building systems that understand people in real-world scenarios.",
+        intro: "I'm Yixuan Zhuang. My research interests are robot perception, multimodal interaction and intelligent system integration, with a focus on enabling robots and intelligent systems to understand and naturally interact with people in real-world settings.",
         summary:
-            "Solid foundation in computer science, mathematics and machine learning, with the ability to combine algorithmic understanding, experimental validation and engineering implementation in real projects. Comfortable working in English-speaking, cross-disciplinary teams, and skilled at using AI-assisted tools to speed up information retrieval, coding and experiment iteration.",
+            "Solid foundation in computer science, mathematics and machine learning, with the ability to combine algorithmic understanding, experimental validation and engineering implementation in real projects. Self-driven, quick to learn and comfortable working in English-speaking, cross-disciplinary teams, with experience using AI-assisted tools to speed up information retrieval, coding and experiment iteration.",
         contacts: [
             { label: "Email", value: "zhuangyixuan46@163.com", href: "mailto:zhuangyixuan46@163.com" },
             { label: "Phone", value: "+86 18359735953", href: "tel:+8618359735953" },
             { label: "WeChat", value: "zyx43ksdy" },
             { label: "Website", value: "legendzyx.github.io", href: "https://legendzyx.github.io/" },
+            { label: "GitHub", value: "github.com/LeGendZyx", href: "https://github.com/LeGendZyx" },
         ],
     },
     educationList: [
@@ -228,31 +243,33 @@ const en = {
             time: "2019.09 - 2024.09",
         },
     ],
-    projectList: [
+    publicationList: [
         {
-            title: "PaperAudit — Multi-Agent Research Integrity Screening Tool",
-            role: "Hackathon Project · UK AI Agent Hackathon",
-            time: "2026.07",
+            title: "M³I: A Multimodal Benchmark for Multi-Party Reception Interaction",
+            role: "Co-second author · ICASSP 2027 under review",
+            time: "2026.09",
             highlights: [
-                "Developed an open-source multi-agent tool for screening scientific papers for research-integrity anomalies, focusing on statistical errors, image reuse and citation integrity.",
-                "Implemented PDF ingestion, GRIM tests, p-value recomputation, image-duplication detection and Crossref checks, with CLI and FastAPI web interfaces for generating Markdown / JSON audit reports.",
-                "Designed specialist AI reviewer and adjudicator agents to produce evidence-linked risk assessments for human review.",
+                "Developed the multi-camera, participant-level head-pose data pipeline, combining YOLOv8 / YuNet, solvePnP and multi-view triangulation to extract frame-level head pose and 3D head positions for visual turn-taking features.",
+                "Built cross-camera trajectory association and stable Person ID mapping, then aligned head-pose tracks to a shared audio timeline through audio / motion cross-correlation to unify anonymous participant identities and timing across devices.",
+                "Contributed to the M³I dataset and multi-party turn-taking benchmark, comprising 23 groups, 8 hours 42 minutes of continuous interaction and six unscripted reception scenarios.",
             ],
         },
+    ],
+    projectList: [
         {
-            title: "Furhat Social Robot Dialogue System",
-            role: "Robot Interaction Development",
+            title: "Predictive Multi-Party Turn-Taking for Furhat",
+            role: "Multimodal Interaction & Machine Learning",
             time: "2025.09 - Present",
             highlights: [
-                "Built Furhat's interaction flow for multi-party conversation scenarios, focusing on turn-taking, response timing and user experience.",
-                "Modeled interaction around multimodal cues such as speaking state, gaze direction and conversational timing to make the robot more natural in group conversations.",
-                "Rebuilt the dialogue data pipeline from RGBD video and audio data to support downstream turn-taking prediction and machine learning modeling.",
+                "Developed a predictive turn-management model for 3-4 person service conversations, forecasting each participant's speaking tendency two seconds ahead to help the robot choose when to respond.",
+                "Integrated multi-view video, head orientation, lapel-microphone audio and manual dialogue annotations, synchronizing, cleaning and quality-checking approximately 64,000 frames of real interaction data.",
+                "Compared audio-only, visual-only and multimodal variants, finding that head-pose features improved overall frame-level prediction while direct fusion did not deliver consistent gains.",
             ],
         },
         {
             title: "TIAGo Service Robot System Integration",
             role: "Robot System Integration",
-            time: "2025.11 - Present",
+            time: "2025.11 - 2026.04",
             highlights: [
                 "Contributed to an assistive robot system based on TIAGo, building the Webots simulation environment and integrating the pipeline from perception to navigation execution.",
                 "Built a human-robot interaction flow for a chemotherapy-ward assistance scenario on top of ROS 2, Nav2 and service-task logic, closing the loop from user request recognition to autonomous approach.",
@@ -266,6 +283,16 @@ const en = {
             highlights: [
                 "Built an RGB video action recognition model with ResNet-18, BiLSTM and Attention for classifying 30 industrial action categories.",
                 "Completed data preprocessing, augmentation, training and validation, reaching 95% validation accuracy under early stopping.",
+            ],
+        },
+        {
+            title: "PaperAudit - Multi-Agent Research Integrity Screening Tool",
+            role: "Hackathon Project · UK AI Agent Hackathon",
+            time: "2026.07",
+            highlights: [
+                "Developed an open-source multi-agent tool for screening scientific papers for research-integrity anomalies, focusing on statistical errors, image reuse and citation integrity.",
+                "Implemented PDF ingestion, GRIM tests, p-value recomputation, image-duplication detection and Crossref checks, with CLI and FastAPI web interfaces for generating Markdown / JSON audit reports.",
+                "Designed specialist AI reviewer and adjudicator agents to produce evidence-linked risk assessments for human review.",
             ],
         },
         {
@@ -300,23 +327,23 @@ const en = {
     projectShowcaseList: [
         {
             title: "TIAGo Service Robot: Ward Assistance",
-            time: "2025.11 - Present",
+            time: "2025.11 - 2026.04",
             tech: "ROS 2, Nav2, Webots, Mediapipe",
             description:
                 "A service robot for chemotherapy-ward assistance, fusing hand-wave detection and voice triggers to close the loop from user request to autonomous approach.",
             image: "projects/tiago.jpg",
         },
         {
-            title: "Furhat Social Robot: Multi-Party Dialogue",
+            title: "Furhat Social Robot: Multi-Party Turn-Taking",
             time: "2025.09 - Present",
-            tech: "Furhat SDK, Multimodal Cue Modeling, RGBD Data",
+            tech: "Furhat SDK, Multimodal Turn-Taking, Head Pose, Audio",
             description:
-                "Researching turn-taking and response timing for Furhat in multi-party conversations, combining multimodal cues such as speaking state and gaze direction to make the robot feel more natural in group dialogue.",
+                "A predictive turn-management model for 3-4 person service conversations, combining multi-view video, head orientation and audio to forecast speaking tendencies and help the robot choose when to respond.",
             image: "projects/furhat.jpg",
         },
         {
             title: "Digital Shadow Puppetry: Gesture-Driven Interaction",
-            time: "2025.06 - Present",
+            time: "2025.06 - 2026.06",
             tech: "Web, Mediapipe, Real-Time Hand Tracking",
             description:
                 "Internship project at Wutianqing Studio, Tsinghua University: a browser-based real-time interactive system using Mediapipe hand tracking for gesture-driven digital shadow-puppet control.",
@@ -324,7 +351,7 @@ const en = {
         },
         {
             title: "Unity 2D Management Sim \"The Way Home for Pets\"",
-            time: "2024.10 - Present",
+            time: "2024.10 - 2025.02",
             tech: "Unity, C#, Game Architecture",
             description:
                 "Served as lead programmer for the quest system, team coordination and core features; entered the TapTap Game Jam.",
@@ -335,7 +362,7 @@ const en = {
         {
             title: "Wutianqing Studio, Tsinghua University",
             role: "Frontend Developer",
-            time: "2025.06 - Present",
+            time: "2025.06 - 2026.06",
             highlights: [
                 "Developed a browser-based real-time interactive system using Mediapipe hand tracking for gesture-driven digital shadow puppetry.",
             ],
@@ -362,15 +389,15 @@ const en = {
     skillGroups: [
         {
             title: "Programming & Engineering",
-            items: ["Java", "Python", "C++", "JavaScript", "Git"],
+            items: ["Java", "Python", "C++", "Git"],
         },
         {
             title: "Robotics & AI",
-            items: ["ROS 2", "Mediapipe", "TensorFlow", "PyTorch"],
+            items: ["ROS 2", "Mediapipe", "PyTorch"],
         },
         {
             title: "Platforms & Tools",
-            items: ["Linux / Ubuntu", "Unity", "React", "Node.js"],
+            items: ["Linux / Ubuntu", "Webots", "Isaac Sim", "Unity"],
         },
     ],
     languages: ["Chinese: Native", "English: IELTS 7.5"],
@@ -384,17 +411,18 @@ const en = {
     ui: {
         heroGreeting: "Hi, I'm",
         heroName: "Yixuan Zhuang",
-        roles: ["Embodied AI", "Multimodal Interaction", "AI Algorithms"],
+        roles: ["Robot Perception", "Multimodal Interaction", "Intelligent Systems"],
         scrollHint: "Scroll Down",
         footer: "© 2026 Yixuan Zhuang · Built with React + Vite + Tailwind",
         viewProjects: "View Projects",
         viewResume: "View Resume",
         profileTitle: "Profile",
         contactTitle: "Contact",
-        resumeTitle: "Education & Work Experience",
+        resumeTitle: "Education, Publications & Work Experience",
         resumeNote:
-            "Centered on embodied AI, multimodal interaction and AI algorithms, turning research understanding into engineering practice.",
+            "Centered on robot perception, multimodal interaction and intelligent system integration, turning research understanding into engineering practice.",
         educationTitle: "Education",
+        publicationTitle: "Publications",
         workTitle: "Work & Internships",
         projectsTitle: "Projects",
         showcaseTitle: "Project Showcase",
